@@ -1,0 +1,23 @@
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Byte-compiled / cach files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+.env/
+env/
+
+# Ignore all .env* files
+.env*
+
+# Distribution / Packaging
+*.egg-info/
+dist/
+build/
