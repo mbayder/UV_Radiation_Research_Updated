@@ -10,15 +10,20 @@
 
 **Code Use Instructions:** If all folders, files, and programs were installed properly, they should all work 
 right away! Here are some helpful tips and descriptions: 
-- Some code may require user input, so please be sure to be able to type them in somewhere on your screen.
+- The programs can be executed in any order. 
+- Scripts with 'legend' in their names generate some figure legends; 
+the rest of the scripts generate analysis results.
+- Run the scripts from the repository's main directory to keep the relative paths to data correct.
+- Some code may require user input, so be sure to have a terminal open somewhere on your screen.
 - The outputs should include some printed information, data in CSV format, and figures in PNG and PDF formats. 
-- If you wish, you may use your own local directories for outputs; simply replace 'Results' directory with the path to 
+- By default, all outputs are saved in the 'Results' directory, a subdirectory of the main directory. 
+If you wish, you may use your own local directories for outputs; simply replace 'Results' directory with the path to 
 your local directory. 
-- Please do not touch the relative paths to data files. 
-- To avoid potential library conflicts, please use the following package versions: contourpy 1.3.3 ;
-cycler 0.12.1 ; fonttools 4.63.0 ; kiwisolver 1.5.0 ; matplotlib 3.10.9 ; numpy 2.4.5 ; packaging 26.2 ; pandas 3.0.3 ; 
-pillow 12.2.0 ; pyparsing 3.3.2 ; python-dateutil 2.9.0.post0 ; pytz 2026.2 ; scipy 1.17.1 ; six 1.17.0 ; 
-tzdata 2026.2 ; unicodeit 0.7.5 
+- Do not touch the relative paths to data files.
+- The code was developed using Python 3.14.5. The package versions are listed below: (see requirements.txt for list 
+of packages): contourpy 1.3.3 ; cycler 0.12.1 ; fonttools 4.63.0 ; kiwisolver 1.5.0 ; matplotlib 3.10.9 ; numpy 2.4.5 ;
+packaging 26.2 ; pandas 3.0.3 ; pillow 12.2.0 ; pyparsing 3.3.2 ; python-dateutil 2.9.0.post0 ; pytz 2026.2 ; 
+scipy 1.17.1 ; six 1.17.0 ; tzdata 2026.2 ; unicodeit 0.7.5 
 
 Please feel free to email the code author if you have any issues, questions, comments, suggestions, etc. 
 
