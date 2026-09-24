@@ -77,3 +77,14 @@ rate of organic matter breakdown and minimally affected how much and when the ra
 
 To see figures and bibliography, please refer to "Microbial exoenzymes promoted the transition to an oxygenated 
 Earth" by Sanger et al.
+
+**Data Sources:**
+
+Where data was extracted from plots, WebPlotDigitizer (https://automeris.io/) was used. 
+
+- Claire_Data: https://live-vpl-test.pantheonsite.io/models/evolution-of-solar-flux/
+- ACS_Data: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2006JE002784 
+and https://www.nature.com/articles/nature13068 
+and https://royalsocietypublishing.org/rsos/article/9/1/211165/96470/A-revised-lower-estimate-of-ozone-columns-during
+- Water_Data: https://link.springer.com/article/10.1023/A:1006765405786 
+and https://opg.optica.org/ao/fulltext.cfm?uri=ao-12-3-555
