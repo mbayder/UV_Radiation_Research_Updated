@@ -30,7 +30,7 @@ target_age_3 = 4.603
 start_time = time.time()
 # endregion
 
-file_path_00 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\SunModern.txt'
+file_path_00 = r'Claire_Data\SunModern.txt'
 data_00 = pd.read_csv(file_path_00, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 wavelengths = np.array(data_00['wavelength'])
@@ -43,7 +43,7 @@ until_uvb = [100, 315]
 only_uvc = [100, 280]
 until_uvc = [100, 280]
 
-file_path_water_1 = r'C:\Users\User\Documents\McGill Internship 2024\Water_Data\Water_Data_1.csv'
+file_path_water_1 = r'Water_Data\Water_Data_1.csv'
 data_water_1 = pd.read_csv(file_path_water_1, comment='#', names=['wavelength', 'coefficient'], nrows=157)
 water_wavelengths_1 = data_water_1['wavelength'].astype(float)
 water_coefficients_1 = data_water_1['coefficient'].astype(float)
@@ -51,7 +51,7 @@ water_interpolator_1 = interp1d(water_wavelengths_1, water_coefficients_1, kind=
                                 fill_value="extrapolate")
 water_coefficients_lst_1 = np.array(water_interpolator_1(wavelengths))
 
-directory = r'C:\Users\User\Documents\McGill Internship 2024\PDF_Plots'
+directory = r'Results'
 
 if not os.path.exists(directory):
     os.makedirs(directory)

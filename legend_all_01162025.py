@@ -3,7 +3,7 @@ import os
 import unicodeit
 from datetime import datetime
 
-directory = r'C:\Users\User\Documents\McGill Internship 2024\PDF_Plots'
+directory = r'Results'
 if not os.path.exists(directory):
     os.makedirs(directory)
 

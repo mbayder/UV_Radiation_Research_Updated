@@ -7,7 +7,7 @@ from datetime import datetime
 plt.rcParams["font.family"] = ["Arial", "DejaVu Sans"]
 
 
-directory = r'C:\Users\User\Documents\McGill Internship 2024\PDF_Plots'
+directory = r'Results'
 if not os.path.exists(directory):
     os.makedirs(directory)
 

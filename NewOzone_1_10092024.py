@@ -120,7 +120,7 @@ single_PO_bond_wavelength = 357.0  # in nm
 single_CN_bond_wavelength = 392.0  # in nm
 
 print("Wavelengths needed to break each bond below")
-print(" C=O: 161 nm \nC=C: 195 nm \nC-H: 290 nm \nC-O: 334 nm \nC-C: 345 nm \nP-O: 357 nm\nC-N: 392 nm ")
+print("C=O: 161 nm \nC=C: 195 nm \nC-H: 290 nm \nC-O: 334 nm \nC-C: 345 nm \nP-O: 357 nm\nC-N: 392 nm ")
 
 target_age = float(input("Age of the Sun (in Gyr): "))
 # gyears_ago = 4.603 - target_age
@@ -163,31 +163,31 @@ start_time = time.time()
 # endregion
 
 # region Reading data files for Sun
-file_path_fut_56 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun5.6Gyr.txt'
+file_path_fut_56 = r'Claire_Data\Sun5.6Gyr.txt'
 data_fut_56 = pd.read_csv(file_path_fut_56, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                           skiprows=103, nrows=5726)
 
-file_path_00 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\SunModern.txt'
+file_path_00 = r'Claire_Data\SunModern.txt'
 data_00 = pd.read_csv(file_path_00, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_06 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun0.6Ga.txt'
+file_path_06 = r'Claire_Data\Sun0.6Ga.txt'
 data_06 = pd.read_csv(file_path_06, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_18 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun1.8Ga.txt'
+file_path_18 = r'Claire_Data\Sun1.8Ga.txt'
 data_18 = pd.read_csv(file_path_18, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_24 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun2.4Ga.txt'
+file_path_24 = r'Claire_Data\Sun2.4Ga.txt'
 data_24 = pd.read_csv(file_path_24, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_38 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun3.8Ga.txt'
+file_path_38 = r'Claire_Data\Sun3.8Ga.txt'
 data_38 = pd.read_csv(file_path_38, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_44 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun4.4Ga.txt'
+file_path_44 = r'Claire_Data\Sun4.4Ga.txt'
 data_44 = pd.read_csv(file_path_44, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 # endregion
@@ -266,41 +266,41 @@ mass_03 = 7.970587394 * 10 ** (-26)
 g_Earth = 9.8  # N/kg
 
 # region Reading Atmosphere files
-file_path_CO2_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\CO2_ACS.csv'
+file_path_CO2_acs = r'ACS_Data\CO2_ACS.csv'
 data_CO2_acs = pd.read_csv(file_path_CO2_acs, comment='#', names=['wavelength', 'acs'], nrows=322)
 data_CO2_acs_wl = data_CO2_acs['wavelength'].astype(float)
 data_CO2_acs_acs = data_CO2_acs['acs'].astype(float)
 
-file_path_N2_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\N2_ACS.csv'
+file_path_N2_acs = r'ACS_Data\N2_ACS.csv'
 data_N2_acs = pd.read_csv(file_path_N2_acs, comment='#', names=['wavelength', 'acs'], nrows=12)
 data_N2_acs_wl = data_N2_acs['wavelength'].astype(float)
 data_N2_acs_acs = data_N2_acs['acs'].astype(float)
 
-file_path_O2_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O2_ACS.csv'
+file_path_O2_acs = r'ACS_Data\O2_ACS.csv'
 data_O2_acs = pd.read_csv(file_path_O2_acs, comment='#', names=['wavelength', 'acs'], nrows=322)
 data_O2_acs_wl = data_O2_acs['wavelength'].astype(float)
 data_O2_acs_acs = data_O2_acs['acs'].astype(float)
 
-file_path_O2_time = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O2_vs_Time.csv'
+file_path_O2_time = r'ACS_Data\O2_vs_Time.csv'
 data_O2_time = pd.read_csv(file_path_O2_time, delimiter=",", comment='#', names=['time', 'pressure'], nrows=177)
 data_O2_time_time = data_O2_time['time'].astype(float)
 print(f"New O2 time data: {data_O2_time_time}")
 data_O2_time_pressure = data_O2_time['pressure'].astype(float)
 print(f"New O2 pressure data (in %PAL): {data_O2_time_pressure}")
 
-file_path_O3_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O3_ACS.csv'
+file_path_O3_acs = r'ACS_Data\O3_ACS.csv'
 data_O3_acs = pd.read_csv(file_path_O3_acs, comment='#', names=['wavelength', 'acs'], nrows=562)
 data_O3_acs_wl = data_O3_acs['wavelength'].astype(float)
 data_O3_acs_acs_special = data_O3_acs['acs'].astype(float)
 
-file_path_O3_sigma = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O3_Sigma.csv'  # EDIT stuff here to implement ozone here
+file_path_O3_sigma = r'ACS_Data\O3_Sigma.csv'  # EDIT stuff here to implement ozone here
 data_O3_sigma = pd.read_csv(file_path_O3_sigma, comment="#", names=['O2_amount', 'O3_sigma'])
 data_O3_sigma_O2 = data_O3_sigma['O2_amount'].astype(float)
 data_O3_sigma_sigma = data_O3_sigma['O3_sigma'].astype(float)
 data_O3_sigma_sigma = data_O3_sigma_sigma * 2.687 * 10 ** 20 * mass_03
 
 # # Amount of ozone: O3_3 < O3_1 < O3_2
-# file_path_O3_density = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O3_Density_3.csv'  # Change to needed density
+# file_path_O3_density = r'ACS_Data\O3_Density_3.csv'  # Change to needed density
 # # data_O3_density = pd.read_csv(file_path_O3_density, comment='#', names=['altitude', 'density'], nrows=147)  # For O3_Density_1
 # # data_O3_density = pd.read_csv(file_path_O3_density, comment='#', names=['altitude', 'density'], nrows=163)  # For O3_Density_2
 # data_O3_density = pd.read_csv(file_path_O3_density, comment='#', names=['altitude', 'density'], nrows=263)  # For O3_Density_3
@@ -548,9 +548,9 @@ flux_post_atmosphere_photons = solar_to_atmosphere_flux(flux_needed_photons, tau
 
 
 # region Ocean Water Modeling
-file_path_water_1 = r'C:\Users\User\Documents\McGill Internship 2024\Water_Data\Water_Data_1.csv'
-file_path_water_2 = r'C:\Users\User\Documents\McGill Internship 2024\Water_Data\Water_Data_2.txt'
-file_path_water_3 = r'C:\Users\User\Documents\McGill Internship 2024\Water_Data\Water_Data_3.txt'  # Change to 1, 2, 3, 4 as needed (csv for 1 and 4, txt for 2 and 3)
+file_path_water_1 = r'Water_Data\Water_Data_1.csv'
+file_path_water_2 = r'Water_Data\Water_Data_2.txt'
+file_path_water_3 = r'Water_Data\Water_Data_3.txt'  # Change to 1, 2, 3, 4 as needed (csv for 1 and 4, txt for 2 and 3)
 
 data_water_1 = pd.read_csv(file_path_water_1, comment='#', names=['wavelength', 'coefficient'],
                            nrows=157)  # For Water_Data_1
@@ -899,7 +899,7 @@ while time_steps < max_time:
 
 # endregion
 
-directory = r'C:\Users\User\Documents\McGill Internship 2024\PDF_Plots'
+directory = r'Results'
 
 # Create the directory if it doesn't exist
 if not os.path.exists(directory):
@@ -1046,7 +1046,7 @@ flux_vs_wavelength_data[f'Flux at Earth surface, W/(m^2 * nm)'] = flux_post_atmo
 flux_vs_wavelength_data[f'Flux under {water_depth} m of water, W/(m^2 * nm)'] = flux_post_water_specific
 flux_vs_wavelength_data[f'Flux in ocean mixed layer of {mixed_layer_depth} m, W/(m^2 * nm)'] = flux_post_water_mixed
 flux_vs_wavelength_df = pd.DataFrame(flux_vs_wavelength_data)
-flux_vs_wavelength_df.to_csv(rf'C:\Users\User\Documents\McGill Internship 2024\CSV_Data\Flux_vs_Wavelength_Data_{timestamp}.csv', index=False)
+flux_vs_wavelength_df.to_csv(rf'Results\Flux_vs_Wavelength_Data_{timestamp}.csv', index=False)
 
 
 fig, (ax1, ax2) = plt.subplots(2, 1, sharex="all")
@@ -1174,7 +1174,7 @@ flux_vs_time_data[f'Flux at Earth surface, W/(m^2)'] = integrated_flux_lst_atmos
 flux_vs_time_data[f'Flux under {water_depth} m of water, W/(m^2)'] = integrated_flux_lst_water
 flux_vs_time_data[f'Flux in ocean mixed layer of {mixed_layer_depth} m, W/(m^2)'] = integrated_flux_lst_water_mixed_time
 flux_vs_time_df = pd.DataFrame(flux_vs_time_data)
-flux_vs_time_df.to_csv(rf'C:\Users\User\Documents\McGill Internship 2024\CSV_Data\Flux_vs_Time_Data_from_{wavelength_integration_start}_nm_to_{wavelength_integration_end}_nm_{timestamp}.csv', index=False)
+flux_vs_time_df.to_csv(rf'Results\Flux_vs_Time_Data_from_{wavelength_integration_start}_nm_to_{wavelength_integration_end}_nm_{timestamp}.csv', index=False)
 
 
 plt.figure()

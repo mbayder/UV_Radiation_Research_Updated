@@ -55,27 +55,27 @@ start_time = time.time()
 # endregion
 
 # region Reading data files for Sun
-file_path_00 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\SunModern.txt'
+file_path_00 = r'Claire_Data\SunModern.txt'
 data_00 = pd.read_csv(file_path_00, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_06 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun0.6Ga.txt'
+file_path_06 = r'Claire_Data\Sun0.6Ga.txt'
 data_06 = pd.read_csv(file_path_06, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_18 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun1.8Ga.txt'
+file_path_18 = r'Claire_Data\Sun1.8Ga.txt'
 data_18 = pd.read_csv(file_path_18, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_24 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun2.4Ga.txt'
+file_path_24 = r'Claire_Data\Sun2.4Ga.txt'
 data_24 = pd.read_csv(file_path_24, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_38 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun3.8Ga.txt'
+file_path_38 = r'Claire_Data\Sun3.8Ga.txt'
 data_38 = pd.read_csv(file_path_38, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_44 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun4.4Ga.txt'
+file_path_44 = r'Claire_Data\Sun4.4Ga.txt'
 data_44 = pd.read_csv(file_path_44, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 # endregion
@@ -149,46 +149,46 @@ g_Earth = 9.8  # N/kg
 # endregion
 
 # region Reading Atmosphere files
-file_path_CO2_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\CO2_ACS.csv'
+file_path_CO2_acs = r'ACS_Data\CO2_ACS.csv'
 data_CO2_acs = pd.read_csv(file_path_CO2_acs, comment='#', names=['wavelength', 'acs'], nrows=322)
 # data_CO2_acs = data_CO2_acs.drop_duplicates(subset='wavelength')
 data_CO2_acs_wl = data_CO2_acs['wavelength'].astype(float)
 data_CO2_acs_acs = data_CO2_acs['acs'].astype(float)
 
-file_path_N2_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\N2_ACS.csv'
+file_path_N2_acs = r'ACS_Data\N2_ACS.csv'
 data_N2_acs = pd.read_csv(file_path_N2_acs, comment='#', names=['wavelength', 'acs'], nrows=12)
 data_N2_acs_wl = data_N2_acs['wavelength'].astype(float)
 data_N2_acs_acs = data_N2_acs['acs'].astype(float)
 
-file_path_O2_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O2_ACS.csv'
+file_path_O2_acs = r'ACS_Data\O2_ACS.csv'
 data_O2_acs = pd.read_csv(file_path_O2_acs, comment='#', names=['wavelength', 'acs'], nrows=322)
 data_O2_acs_wl = data_O2_acs['wavelength'].astype(float)
 data_O2_acs_acs = data_O2_acs['acs'].astype(float)
 
-file_path_O2_time_lower = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O2_vs_Time_Lower.csv'
+file_path_O2_time_lower = r'ACS_Data\O2_vs_Time_Lower.csv'
 data_O2_time_lower = pd.read_csv(file_path_O2_time_lower, delimiter=",", comment='#', names=['time', 'pressure'],
                                  nrows=180)
 data_O2_time_time_lower = data_O2_time_lower['time'].astype(float)
 data_O2_time_pressure_lower = data_O2_time_lower['pressure'].astype(float)
 
-file_path_O2_time_upper = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O2_vs_Time_Upper.csv'
+file_path_O2_time_upper = r'ACS_Data\O2_vs_Time_Upper.csv'
 data_O2_time_upper = pd.read_csv(file_path_O2_time_upper, delimiter=",", comment='#', names=['time', 'pressure'],
                                  nrows=174)
 data_O2_time_time_upper = data_O2_time_upper['time'].astype(float)
 data_O2_time_pressure_upper = data_O2_time_upper['pressure'].astype(float)
 
-file_path_O2_time_average = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O2_vs_Time.csv'
+file_path_O2_time_average = r'ACS_Data\O2_vs_Time.csv'
 data_O2_time_average = pd.read_csv(file_path_O2_time_average, delimiter=",", comment='#', names=['time', 'pressure'],
                                    nrows=177)
 data_O2_time_time_average = data_O2_time_average['time'].astype(float)
 data_O2_time_pressure_average = data_O2_time_average['pressure'].astype(float)
 
-file_path_O3_acs = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O3_ACS.csv'
+file_path_O3_acs = r'ACS_Data\O3_ACS.csv'
 data_O3_acs = pd.read_csv(file_path_O3_acs, comment='#', names=['wavelength', 'acs'], nrows=562)
 data_O3_acs_wl = data_O3_acs['wavelength'].astype(float)
 data_O3_acs_acs_special = data_O3_acs['acs'].astype(float)
 
-file_path_O3_sigma = r'C:\Users\User\Documents\McGill Internship 2024\ACS_Data\O3_Sigma.csv'
+file_path_O3_sigma = r'ACS_Data\O3_Sigma.csv'
 data_O3_sigma = pd.read_csv(file_path_O3_sigma, comment="#", names=['O2_amount', 'O3_sigma'])
 data_O3_sigma_O2 = data_O3_sigma['O2_amount'].astype(float)
 data_O3_sigma_sigma = data_O3_sigma['O3_sigma'].astype(float)
@@ -304,7 +304,7 @@ flux_post_atmosphere_3_upper = solar_to_atmosphere_flux(flux_needed_3, tau_lst_3
 # endregion
 
 # region Directory making
-directory = r'C:\Users\User\Documents\McGill Internship 2024\PDF_Plots'
+directory = r'Results'
 
 if not os.path.exists(directory):
     os.makedirs(directory)

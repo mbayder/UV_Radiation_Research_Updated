@@ -40,27 +40,27 @@ target_age_2 = 3.5
 target_age_3 = 4.603
 start_time = time.time()
 
-file_path_00 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\SunModern.txt'
+file_path_00 = r'Claire_Data\SunModern.txt'
 data_00 = pd.read_csv(file_path_00, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_06 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun0.6Ga.txt'
+file_path_06 = r'Claire_Data\Sun0.6Ga.txt'
 data_06 = pd.read_csv(file_path_06, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_18 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun1.8Ga.txt'
+file_path_18 = r'Claire_Data\Sun1.8Ga.txt'
 data_18 = pd.read_csv(file_path_18, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_24 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun2.4Ga.txt'
+file_path_24 = r'Claire_Data\Sun2.4Ga.txt'
 data_24 = pd.read_csv(file_path_24, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_38 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun3.8Ga.txt'
+file_path_38 = r'Claire_Data\Sun3.8Ga.txt'
 data_38 = pd.read_csv(file_path_38, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
-file_path_44 = r'C:\Users\User\Documents\McGill Internship 2024\Claire_Data\Sun4.4Ga.txt'
+file_path_44 = r'Claire_Data\Sun4.4Ga.txt'
 data_44 = pd.read_csv(file_path_44, sep='\\s+', comment='#', names=['wavelength', 'flux'],
                       skiprows=103, nrows=5726)
 
@@ -118,7 +118,7 @@ flux_needed_1 = top_atmosphere_flux(target_age_1)
 flux_needed_2 = top_atmosphere_flux(target_age_2)
 flux_needed_3 = top_atmosphere_flux(target_age_3)
 
-directory = r'C:\Users\User\Documents\McGill Internship 2024\PDF_Plots'
+directory = r'Results'
 
 if not os.path.exists(directory):
     os.makedirs(directory)
